@@ -1,0 +1,10 @@
+{
+	"diagnostic-languageserver.enable": true,
+	"diagnostic-languageserver.mergeConfig": true,
+	"diagnostic-languageserver.filetypes": {
+		"sh": "shellcheck"
+	},
+	"diagnostic-languageserver.formatFiletypes": {
+		"sh": "shfmt"
+	}
+}
