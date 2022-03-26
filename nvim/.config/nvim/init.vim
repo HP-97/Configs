@@ -38,6 +38,10 @@ nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 
+" Move screen up and down with Ctrl + Arrow keys
+nnoremap <C-Up> <C-y>
+nnoremap <C-Down> <C-e>
+
 " GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
@@ -53,6 +57,7 @@ let g:coc_global_extensions = [
       \'coc-json', 
       \'coc-docker',
       \'coc-diagnostic',
+      \'coc-sh',
       \'coc-yaml'
       \]
 

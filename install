@@ -1,0 +1,9 @@
+#!/usr/bin/env fish
+
+set STOW_FOLDERS 'fish' 'nvim'
+
+for folder in $STOW_FOLDERS;
+    stow -D $folder
+    stow $folder
+end
+
