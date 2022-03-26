@@ -48,10 +48,11 @@ nmap <silent> gr <Plug>(coc-references)
 let g:coc_global_extensions = [
       \'coc-vetur',
       \'coc-go',
+      \'@yaegassy/coc-ansible',
       \'coc-pyright',
       \'coc-json', 
       \'coc-docker',
-      \'coc-ansible',
+      \'coc-diagnostic',
       \'coc-yaml'
       \]
 
