@@ -43,3 +43,15 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+
+" coc extensions to be installed
+let g:coc_global_extensions = [
+      \'coc-vetur',
+      \'coc-go',
+      \'coc-pyright',
+      \'coc-json', 
+      \'coc-docker',
+      \'coc-ansible',
+      \'coc-yaml'
+      \]
+
