@@ -8,6 +8,7 @@ Plug 'luochen1990/rainbow'
 Plug 'tpope/vim-commentary'
 Plug 'pearofducks/ansible-vim'
 Plug 'airblade/vim-gitgutter'
+Plug 'Yggdroot/indentLine'
 " This plugin requires code-minimap to be installed and available on PATH
 " Plug 'wfxr/minimap.vim'
 call plug#end()
@@ -38,6 +39,10 @@ nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 
+" Inverse-tab when using shift-tab
+nnoremap <S-Tab> <<
+inoremap <S-Tab> <C-D>
+
 " Move screen up and down with Ctrl + Arrow keys
 nnoremap <C-Up> <C-y>
 nnoremap <C-Down> <C-e>
@@ -50,14 +55,18 @@ nmap <silent> gr <Plug>(coc-references)
 
 " coc extensions to be installed
 let g:coc_global_extensions = [
-      \'coc-vetur',
-      \'coc-go',
       \'@yaegassy/coc-ansible',
-      \'coc-pyright',
-      \'coc-json', 
+      \'coc-clangd',
       \'coc-docker',
       \'coc-diagnostic',
+      \'coc-go',
+      \'coc-html',
+      \'coc-json', 
+      \'coc-pyright',
+      \'coc-rust-analyzer',
       \'coc-sh',
+      \'coc-tsserver',
+      \'coc-vetur',
       \'coc-yaml'
       \]
 
