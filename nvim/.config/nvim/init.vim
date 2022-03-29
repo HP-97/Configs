@@ -9,6 +9,7 @@ Plug 'tpope/vim-commentary'
 Plug 'pearofducks/ansible-vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'Yggdroot/indentLine'
+Plug 'lambdalisue/suda.vim'
 " This plugin requires code-minimap to be installed and available on PATH
 " Plug 'wfxr/minimap.vim'
 call plug#end()
@@ -60,6 +61,7 @@ let g:coc_global_extensions = [
       \'coc-docker',
       \'coc-diagnostic',
       \'coc-go',
+      \'coc-groovy',
       \'coc-html',
       \'coc-json', 
       \'coc-pyright',
@@ -69,4 +71,7 @@ let g:coc_global_extensions = [
       \'coc-vetur',
       \'coc-yaml'
       \]
+
+" Turn on suda smart edit
+let g:suda_smart_edit = 1
 
