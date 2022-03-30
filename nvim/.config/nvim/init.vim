@@ -10,6 +10,9 @@ Plug 'pearofducks/ansible-vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'Yggdroot/indentLine'
 Plug 'lambdalisue/suda.vim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-treesitter/nvim-treesitter'
 " This plugin requires code-minimap to be installed and available on PATH
 " Plug 'wfxr/minimap.vim'
 call plug#end()
@@ -26,6 +29,8 @@ set number
 
 " Set color scheme
 colorscheme molokai
+
+let mapleader = " "
 
 " Enable rainbow brackets on default
 let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
@@ -75,3 +80,11 @@ let g:coc_global_extensions = [
 " Turn on suda smart edit
 let g:suda_smart_edit = 1
 
+" Find files using Telescope command-line sugar.
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
+" Symbol renaming
+nmap <leader>rn <Plug>(coc-rename)
