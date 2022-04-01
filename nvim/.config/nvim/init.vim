@@ -68,6 +68,7 @@ let g:coc_global_extensions = [
       \'coc-go',
       \'coc-groovy',
       \'coc-html',
+      \'coc-htmldjango',
       \'coc-json', 
       \'coc-pyright',
       \'coc-rust-analyzer',
@@ -88,3 +89,6 @@ nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 " Symbol renaming
 nmap <leader>rn <Plug>(coc-rename)
+
+" Double click space to get rid of highlights
+nnoremap <Leader><space> :noh<cr>
