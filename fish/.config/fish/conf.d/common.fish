@@ -2,6 +2,8 @@ fish_add_path ~/bin
 
 fish_add_path ~/.local/bin
 
+fish_add_path /usr/local/go/bin
+
 alias nvconf="nvim ~/.config/nvim/init.vim"
 alias nvcd="cd ~/.config/nvim"
 set -gx EDITOR nvim

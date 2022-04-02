@@ -13,6 +13,9 @@ Plug 'lambdalisue/suda.vim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'folke/todo-comments.nvim'
+Plug 'ryanoasis/vim-devicons'
+Plug 'folke/trouble.nvim'
 " This plugin requires code-minimap to be installed and available on PATH
 " Plug 'wfxr/minimap.vim'
 call plug#end()
@@ -92,3 +95,8 @@ nmap <leader>rn <Plug>(coc-rename)
 
 " Double click space to get rid of highlights
 nnoremap <Leader><space> :noh<cr>
+
+" todo-comment settings
+lua << EOF
+  require("todo-comments").setup {}
+EOF
