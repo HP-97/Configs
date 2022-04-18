@@ -116,6 +116,8 @@ nnoremap <Leader><space> :noh<cr>
 
 nnoremap <leader>td <cmd>TodoTelescope<cr>
 
+let g:vim_json_conceal=0
+
 "
 "lua settings
 lua << EOF
