@@ -1,6 +1,6 @@
 #!/usr/bin/env fish
 
-set STOW_FOLDERS 'fish' 'nvim'
+set STOW_FOLDERS 'fish' 'nvim' 'tmux'
 
 for folder in $STOW_FOLDERS;
     stow -D $folder
