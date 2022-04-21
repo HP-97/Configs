@@ -103,7 +103,7 @@ let g:coc_global_extensions = [
 let g:suda_smart_edit = 1
 
 " Find files using Telescope command-line sugar.
-nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>ff <cmd>Telescope find_files hidden=true<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
@@ -117,6 +117,7 @@ nnoremap <Leader><space> :noh<cr>
 nnoremap <leader>td <cmd>TodoTelescope<cr>
 
 let g:vim_json_conceal=0
+let g:markdown_syntax_conceal=0
 
 "
 "lua settings
