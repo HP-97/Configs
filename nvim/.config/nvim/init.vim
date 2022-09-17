@@ -163,6 +163,7 @@ lua << EOF
 }
 EOF
 
+<<<<<<< HEAD
 " WSL yank support
 let s:clip = '/mnt/c/Windows/System32/clip.exe'  " change this path according to your mount point
 if executable(s:clip)
@@ -171,4 +172,7 @@ if executable(s:clip)
         autocmd TextYankPost * if v:event.operator ==# 'y' | call system(s:clip, @0) | endif
     augroup END
 endif
+=======
+autocmd BufWritePre *.go :silent call CocAction('runCommand', 'editor.action.organizeImport')
+>>>>>>> 37b1f170a670d747cc03bec066392720c6fa0351
 
