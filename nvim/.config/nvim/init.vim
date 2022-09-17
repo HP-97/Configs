@@ -22,6 +22,36 @@ Plug 'folke/lsp-colors.nvim'
 " Plug 'wfxr/minimap.vim'
 call plug#end()
 
+" Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
+" delays and poor user experience.
+set updatetime=300
+
+" Always show the signcolumn, otherwise it would shift the text each time
+" diagnostics appear/become resolved.
+set signcolumn=yes
+
+" Use tab for trigger completion with characters ahead and navigate.
+" NOTE: There's always complete item selected by default, you may want to enable
+" no select by `"suggest.noselect": true` in your configuration file.
+" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
+" other plugin before putting this into your config.
+" inoremap <silent><expr> <Tab>
+"       \ coc#pum#visible() ? coc#pum#next(1) :
+"       \ CheckBackspace() ? "\<Tab>" :
+"       \ coc#refresh()
+
+" inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
+
+" " Make <CR> to accept selected completion item or notify coc.nvim to format
+" " <C-g>u breaks current undo, please make your own choice.
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
+" function! CheckBackspace() abort
+"   let col = col('.') - 1
+"   return !col || getline('.')[col - 1]  =~# '\s'
+" endfunction
+
 " Use <c-space> to trigger completion.
 if has('nvim')
   inoremap <silent><expr> <c-space> coc#refresh()
@@ -36,7 +66,8 @@ set number
 set mouse=a 
 
 " Set color scheme
-colorscheme gruvbox
+let g:gruvbox_contrast_dark = "hard"
+colorscheme molokai
 
 let mapleader = " "
 
@@ -55,7 +86,7 @@ nnoremap <C-f> :NERDTreeFind<CR>
 
 " Inverse-tab when using shift-tab
 nnoremap <S-Tab> <<
-inoremap <S-Tab> <C-D>
+" inoremap <S-Tab> <C-D>
 
 " Move screen up and down with Ctrl + Arrow keys
 nnoremap <C-Up> <C-y>
@@ -132,4 +163,12 @@ lua << EOF
 }
 EOF
 
+" WSL yank support
+let s:clip = '/mnt/c/Windows/System32/clip.exe'  " change this path according to your mount point
+if executable(s:clip)
+    augroup WSLYank
+        autocmd!
+        autocmd TextYankPost * if v:event.operator ==# 'y' | call system(s:clip, @0) | endif
+    augroup END
+endif
 
