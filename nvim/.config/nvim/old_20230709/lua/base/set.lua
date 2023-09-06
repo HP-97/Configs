@@ -3,3 +3,4 @@ vim.opt.clipboard = "unnamedplus"
 
 -- Show numbers on default
 vim.opt.number = true
+
