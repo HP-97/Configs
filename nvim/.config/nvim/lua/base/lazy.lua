@@ -13,8 +13,8 @@ require("lazy").setup({
     {"nvim-tree/nvim-web-devicons"},
     {"folke/trouble.nvim", dependencies = {"nvim-tree/nvim-web-devicons"}},
     {"nvim-lua/plenary.nvim"},
-    {'nvim-telescope/telescope.nvim', tag = '0.1.2'},
-    dependencies = {"nvim-lua/plenary.nvim"},
+    {'nvim-telescope/telescope.nvim', tag = '0.1.2',
+    dependencies = {"nvim-lua/plenary.nvim"}},
     {'tpope/vim-fugitive'},
     {
         'VonHeikemen/lsp-zero.nvim',

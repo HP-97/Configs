@@ -22,7 +22,7 @@ if vim.fn.has("wsl") == 1 then
                 end),
                 ["*"] = (function()
                     return vim.fn.systemlist(
-                               'wl-paste --primary --no-newline|tr -r "\r"',
+                               'wl-paste --primary --no-newline|tr -d "\r"',
                                {''}, 1)
                 end)
             },
