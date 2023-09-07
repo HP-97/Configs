@@ -62,6 +62,10 @@ local plugins = {
     init = function()
       require("core.utils").lazy_load "trouble.nvim"
     end,
+    cmd = "TroubleToggle",
+    config = function(_, opts)
+      require("trouble").setup(opts)
+    end
   }
 
   -- To make a plugin not be loaded

@@ -10,5 +10,15 @@ M.general = {
 }
 
 -- more keybinds!
+M.trouble = {
+  n = {
+    ["<C-t>"] = {
+      function()
+        require("trouble").toggle()
+      end,
+      "Open trouble pane",
+    }
+  }
+}
 
 return M
