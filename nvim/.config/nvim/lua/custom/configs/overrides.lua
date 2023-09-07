@@ -39,6 +39,8 @@ M.mason = {
     "clangd",
     "clang-format",
 
+    -- rust stuff
+    "rust-analyzer"
   },
 }
 
