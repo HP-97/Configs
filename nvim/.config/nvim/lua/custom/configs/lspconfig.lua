@@ -16,7 +16,12 @@ end
 -- 
 -- lspconfig.pyright.setup { blabla}
 
-require("lspconfig").rust_analyzer.setup {
+lspconfig.rust_analyzer.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
+
+lspconfig.pyright.setup {
   on_attach = on_attach,
   capabilities = capabilities,
 }
