@@ -12,7 +12,7 @@ M.general = {
 -- more keybinds!
 M.trouble = {
   n = {
-    ["<C-t>"] = {
+    ["<leader>tt"] = {
       function()
         require("trouble").toggle()
       end,
