@@ -19,6 +19,9 @@ end
 lspconfig.rust_analyzer.setup {
   on_attach = on_attach,
   capabilities = capabilities,
+  root_dir = function()
+    return vim.loop.cwd()
+  end,
 }
 
 lspconfig.pyright.setup {
