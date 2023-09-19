@@ -143,6 +143,10 @@ local default_plugins = {
     config = function()
       require "plugins.configs.lspconfig"
     end,
+    -- CUSTOM-HP: Remove after testing is complete
+    opts = {
+      inlay_hints= { enabled = true },
+    }
   },
 
   -- load luasnips + cmp related in insert mode only

@@ -15,6 +15,7 @@ M.treesitter = {
     "rust",
     "python",
     "go",
+    "bash",
   },
   indent = {
     enable = true,
@@ -49,6 +50,9 @@ M.mason = {
 
     -- go stuff
     "gopls",
+
+    -- bash stuff
+    "bash-language-server",
   },
 }
 
