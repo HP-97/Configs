@@ -16,6 +16,7 @@ M.treesitter = {
     "python",
     "go",
     "bash",
+    "svelte",
   },
   indent = {
     enable = true,
@@ -37,6 +38,7 @@ M.mason = {
     "typescript-language-server",
     "deno",
     "prettier",
+    "svelte-language-server",
 
     -- c/cpp stuff
     "clangd",
