@@ -66,8 +66,13 @@ local plugins = {
     config = function(_, opts)
       require("trouble").setup(opts)
     end
-  }
+  },
 
+  {
+    "windwp/nvim-autopairs",
+    event = "InsertEnter",
+    config = true
+  },
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",
