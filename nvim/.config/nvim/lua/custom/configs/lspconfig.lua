@@ -39,3 +39,7 @@ lspconfig.bashls.setup {
   capabilities = capabilities,
 }
 
+lspconfig.gleam.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+}

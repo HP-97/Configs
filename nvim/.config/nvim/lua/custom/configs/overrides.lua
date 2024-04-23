@@ -17,6 +17,7 @@ M.treesitter = {
     "go",
     "bash",
     "svelte",
+    "gleam",
   },
   indent = {
     enable = true,
@@ -55,6 +56,9 @@ M.mason = {
 
     -- bash stuff
     "bash-language-server",
+
+    --gleam stuff,
+    "gleam",
   },
 }
 
