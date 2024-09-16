@@ -13,9 +13,7 @@ M.general = {
 M.trouble = {
   n = {
     ["<leader>tt"] = {
-      function()
-        require("trouble").toggle()
-      end,
+      "<cmd>Trouble diagnostics toggle<cr>",
       "Open trouble pane",
     }
   }
