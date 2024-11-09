@@ -122,3 +122,7 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 jwt-decode() {
   jq -R 'split(".") |.[0:2] | map(@base64d) | map(fromjson)' <<< $1
 }
+
+# refer to https://superuser.com/a/363926
+setopt noautomenu
+setopt nomenucomplete
