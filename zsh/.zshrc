@@ -126,3 +126,6 @@ jwt-decode() {
 # refer to https://superuser.com/a/363926
 setopt noautomenu
 setopt nomenucomplete
+
+# Run Cargo's env (i.e. rustup, rustc etc.)
+. "$HOME/.cargo/env"
