@@ -19,6 +19,11 @@ M.on_attach = function(client, bufnr)
   if not utils.load_config().ui.lsp_semantic_tokens and client.supports_method "textDocument/semanticTokens" then
     client.server_capabilities.semanticTokensProvider = nil
   end
+
+  -- If the client supports inlay hints, enable it.
+  if client.server_capabilities.inlayHintProvider then
+    vim.lsp.inlay_hint.enable(true)
+  end
 end
 
 M.capabilities = vim.lsp.protocol.make_client_capabilities()
