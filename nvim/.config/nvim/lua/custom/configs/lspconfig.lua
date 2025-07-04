@@ -19,6 +19,7 @@ end
 lspconfig.rust_analyzer.setup {
   on_attach = on_attach,
   capabilities = capabilities,
+  -- Required to stop rust-analzyer from displaying errors from libs.
   root_dir = function()
     return vim.loop.cwd()
   end,
