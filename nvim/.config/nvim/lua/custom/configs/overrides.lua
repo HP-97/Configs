@@ -19,6 +19,7 @@ M.treesitter = {
     "svelte",
     "java",
     "templ",
+    "scala",
   },
   indent = {
     enable = true,
