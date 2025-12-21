@@ -3,7 +3,7 @@
 from subprocess import check_output
 
 if __name__ == "__main__":
-    folders: list[str] = ['fish', 'nvim', 'zsh', 'tmux']
+    folders: list[str] = ['fish', 'nvim', 'zsh', 'tmux', 'bin']
     for folder in folders:
         print(f"{folder}")
         check_output(["stow", "-D", folder])

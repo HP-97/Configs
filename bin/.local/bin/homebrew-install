@@ -1,0 +1,22 @@
+#!/bin/bash
+
+pkgs() {
+	brew update
+	brew install \
+		nvim \
+		yt-dlp \
+		go \
+		ripgrep \
+		xan \
+		shellcheck \
+		fzf \
+		skim
+}
+
+case "$1" in
+	pkgs) shift ; pkgs "@" ;;
+  *)
+    echo "unrecognized command" >&2
+    exit 1
+    ;;
+esac
