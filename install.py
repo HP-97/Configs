@@ -1,9 +1,14 @@
 #!/usr/bin/env python3
 
 from subprocess import check_output
+import shlex
 
 if __name__ == "__main__":
-    folders: list[str] = ['fish', 'nvim', 'zsh', 'tmux', 'bin']
+    folders: list[str] = ['fish', 'nvim', 'zsh', 'tmux', 'bin', 'wezterm']
+
+    # Ensure stow is installed via brew
+    check_output(shlex.split("brew install stow"))
+
     for folder in folders:
         print(f"{folder}")
         check_output(["stow", "-D", folder])
