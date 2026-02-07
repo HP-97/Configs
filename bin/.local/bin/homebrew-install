@@ -10,7 +10,9 @@ pkgs() {
 		xan \
 		shellcheck \
 		fzf \
-		skim
+		skim \
+		lazygit \
+		tmux
 }
 
 case "$1" in
