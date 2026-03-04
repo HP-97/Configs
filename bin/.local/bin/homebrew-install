@@ -12,6 +12,8 @@ pkgs() {
 		fzf \
 		skim \
 		lazygit \
+		bottom \
+		jenv \
 		tmux
 }
 
