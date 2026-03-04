@@ -1,6 +1,5 @@
 local on_attach = require("plugins.configs.lspconfig").on_attach
 local capabilities = require("plugins.configs.lspconfig").capabilities
-
 local lspconfig = require "lspconfig"
 
 -- if you just want default config for the servers then put them in a table
@@ -23,6 +22,17 @@ lspconfig.rust_analyzer.setup {
   root_dir = function()
     return vim.loop.cwd()
   end,
+  settings = {
+    ["rust-analyzer"] = {
+      inlayHints = {
+        bindingModeHints = { enable = false },
+        chainingHints = { enable = false },
+        closingBraceHints = { enable = false },
+        parameterHints = { enable = false },
+        typeHints = { enable = false },
+      },
+    }
+  },
 }
 
 lspconfig.pyright.setup {
