@@ -6,66 +6,84 @@ local lspconfig = require "lspconfig"
 local servers = { "html", "cssls", "ts_ls", "clangd", "templ" }
 
 for _, lsp in ipairs(servers) do
-  lspconfig[lsp].setup {
-    on_attach = on_attach,
-    capabilities = capabilities,
-  }
+  vim.lsp.config(lsp, {
+    config = {
+      on_attach = on_attach,
+      capabilities = capabilities,
+    }
+  })
 end
 
 -- 
 -- lspconfig.pyright.setup { blabla}
 
-lspconfig.rust_analyzer.setup {
-  on_attach = on_attach,
-  capabilities = capabilities,
-  -- Required to stop rust-analzyer from displaying errors from libs.
-  root_dir = function()
-    return vim.loop.cwd()
-  end,
-  settings = {
-    ["rust-analyzer"] = {
-      inlayHints = {
-        bindingModeHints = { enable = false },
-        chainingHints = { enable = false },
-        closingBraceHints = { enable = false },
-        parameterHints = { enable = false },
-        typeHints = { enable = false },
-      },
-    }
-  },
-}
-
-lspconfig.pyright.setup {
-  on_attach = on_attach,
-  capabilities = capabilities,
-}
-
-lspconfig.gopls.setup {
-  on_attach = on_attach,
-  capabilities = capabilities,
-}
-
-lspconfig.bashls.setup {
-  on_attach = on_attach,
-  capabilities = capabilities,
-}
-
-lspconfig.gleam.setup {
-  on_attach = on_attach,
-  capabilities = capabilities,
-}
-
-lspconfig.svelte.setup {
-  on_attach = on_attach,
-  capabilities = capabilities,
-}
-
-lspconfig.gleam.setup({
-  on_attach = on_attach,
-  capabilities = capabilities,
+vim.lsp.config('rust_analyzer', {
+  config = {
+    on_attach = on_attach,
+    capabilities = capabilities,
+    -- Required to stop rust-analzyer from displaying errors from libs.
+    root_dir = function()
+      return vim.loop.cwd()
+    end,
+    settings = {
+      ["rust-analyzer"] = {
+        inlayHints = {
+          bindingModeHints = { enable = false },
+          chainingHints = { enable = false },
+          closingBraceHints = { enable = false },
+          parameterHints = { enable = false },
+          typeHints = { enable = false },
+        },
+      }
+    },
+  }
 })
 
-lspconfig.jdtls.setup({
-  on_attach = on_attach,
-  capabilities = capabilities,
+vim.lsp.config('pyright', {
+  config = {
+    on_attach = on_attach,
+    capabilities = capabilities,
+  }
+})
+
+vim.lsp.config('gopls', {
+  config = {
+    on_attach = on_attach,
+    capabilities = capabilities,
+  }
+})
+
+vim.lsp.config('bashls', {
+  config = {
+    on_attach = on_attach,
+    capabilities = capabilities,
+  }
+})
+
+vim.lsp.config('gleam', {
+  config = {
+    on_attach = on_attach,
+    capabilities = capabilities,
+  }
+})
+
+vim.lsp.config('svelte', {
+  config = {
+    on_attach = on_attach,
+    capabilities = capabilities,
+  }
+})
+
+vim.lsp.config('gleam', {
+  config = {
+    on_attach = on_attach,
+    capabilities = capabilities,
+  }
+})
+
+vim.lsp.config('jdtls', {
+  config = {
+    on_attach = on_attach,
+    capabilities = capabilities,
+  }
 })
