@@ -10,3 +10,4 @@ local opt = vim.opt
 opt.relativenumber = true
 opt.colorcolumn = "80"
 
+vim.lsp.inlay_hint.enable(false)

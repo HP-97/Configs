@@ -1,9 +1,8 @@
 local on_attach = require("plugins.configs.lspconfig").on_attach
 local capabilities = require("plugins.configs.lspconfig").capabilities
-local lspconfig = require "lspconfig"
 
 -- if you just want default config for the servers then put them in a table
-local servers = { "html", "cssls", "ts_ls", "clangd", "templ" }
+local servers = { "html", "cssls", "ts_ls", "clangd", "templ", "pyright", "gopls", "jdtls", "bashls", "gleam", "svelte", "lua_ls" }
 
 for _, lsp in ipairs(servers) do
   vim.lsp.config(lsp, {
@@ -12,10 +11,8 @@ for _, lsp in ipairs(servers) do
       capabilities = capabilities,
     }
   })
+  vim.lsp.enable(lsp)
 end
-
--- 
--- lspconfig.pyright.setup { blabla}
 
 vim.lsp.config('rust_analyzer', {
   config = {
@@ -38,52 +35,4 @@ vim.lsp.config('rust_analyzer', {
     },
   }
 })
-
-vim.lsp.config('pyright', {
-  config = {
-    on_attach = on_attach,
-    capabilities = capabilities,
-  }
-})
-
-vim.lsp.config('gopls', {
-  config = {
-    on_attach = on_attach,
-    capabilities = capabilities,
-  }
-})
-
-vim.lsp.config('bashls', {
-  config = {
-    on_attach = on_attach,
-    capabilities = capabilities,
-  }
-})
-
-vim.lsp.config('gleam', {
-  config = {
-    on_attach = on_attach,
-    capabilities = capabilities,
-  }
-})
-
-vim.lsp.config('svelte', {
-  config = {
-    on_attach = on_attach,
-    capabilities = capabilities,
-  }
-})
-
-vim.lsp.config('gleam', {
-  config = {
-    on_attach = on_attach,
-    capabilities = capabilities,
-  }
-})
-
-vim.lsp.config('jdtls', {
-  config = {
-    on_attach = on_attach,
-    capabilities = capabilities,
-  }
-})
+vim.lsp.enable("rust_analyzer")
