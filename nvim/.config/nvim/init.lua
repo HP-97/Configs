@@ -1,30 +1,34 @@
+require("user.keymaps")
+
 vim.pack.add({
-  { src = 'https://github.com/nvim-treesitter/nvim-treesitter' },
+  { src = 'https://github.com/nvim-treesitter/nvim-treesitter', version = 'main'},
   { src = 'https://github.com/nvim-tree/nvim-tree.lua'},
+  { src = 'https://github.com/lukas-reineke/indent-blankline.nvim.git', version = 'v3.9.1'},
+  { src = 'https://github.com/mason-org/mason.nvim.git'},
+  { src = 'https://github.com/mason-org/mason-lspconfig.nvim.git'},
+  { src = 'https://github.com/hrsh7th/nvim-cmp.git'},
+  'https://github.com/nvim-tree/nvim-web-devicons',
+  'https://github.com/nvim-lualine/lualine.nvim',
+  'https://github.com/nvim-lua/plenary.nvim.git',
+  'https://github.com/nvim-telescope/telescope.nvim',
+  { src = 'https://github.com/rose-pine/neovim.git', name = 'rose-pine'},
+  'https://github.com/lewis6991/gitsigns.nvim.git',
+  'https://github.com/folke/trouble.nvim.git',
+  'https://github.com/windwp/nvim-autopairs.git',
+  'https://github.com/windwp/nvim-ts-autotag.git',
+  'https://github.com/folke/snacks.nvim.git',
+  'https://github.com/sphamba/smear-cursor.nvim.git',
 })
 
--- 2. Native LSP Setup
--- 0.12 allows enabling servers directly if installed on your system (via rustup/cargo)
-vim.lsp.enable('rust_analyzer')
+vim.opt.number = true
+vim.opt.relativenumber = true
+vim.opt.ignorecase = true
+vim.opt.scrolloff = 999
 
--- 4. Tree-sitter for Highlighting
-require('nvim-treesitter').setup({
-  ensure_installed = { "rust", "lua", "toml" },
-  highlight = { enable = true },
-})
+-- 0.12 Performance boost
+vim.loader.enable()
 
--- Recommended nvim-tree setup for 0.12 compatibility
-require("nvim-tree").setup({
-  sort_by = "case_sensitive",
-  view = {
-    width = 30,
-    -- 0.12 supports better floating window configurations
-    -- if you prefer a floating explorer
-  },
-  renderer = {
-    group_empty = true,
-  },
-  filters = {
-    dotfiles = false,
-  },
-})
+-- Set colorscheme
+vim.cmd('colorscheme rose-pine-moon')
+
+vim.diagnostic.config({ virtual_text = true })
