@@ -18,13 +18,13 @@ map("n", "<leader>fw", "<cmd> Telescope live_grep <CR>", { desc  = "Live grep"})
 -- Trouble
 --------------------------------------------------------------------------------
 map("n", "<leader>tt", "<cmd> Trouble diagnostics toggle focus=false filter.buf=0 <CR>", { desc  = "Trouble diagnostics for buffer idx 0"})
-map("n", "<leader>ta", "<cmd> Trouble diagnostics toggle focus=false filter.buf=0 <CR>", { desc  = "Trouble diagnostics for buffer idx 0"})
+map("n", "<leader>ta", "<cmd> Trouble diagnostics toggle focus=false <CR>", { desc  = "Trouble diagnostics for whole project" })
 
 --------------------------------------------------------------------------------
 -- nvimtree
 --------------------------------------------------------------------------------
 map("n", "<C-n>", "<cmd> NvimTreeToggle <CR>", { desc = "Toggle nvimtree" })
-map("n", "<leader>e", "<cmd> NvimTreeFocus <CR>", { desc = "Focus nvimtree" })
+map("n", "<leader>e", "<cmd> NvimTreeFindFile <CR>", { desc = "Focus nvimtree" })
 
 --------------------------------------------------------------------------------
 -- nvimtree
