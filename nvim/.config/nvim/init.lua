@@ -24,7 +24,9 @@ vim.pack.add({
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.ignorecase = true
-vim.opt.scrolloff = 999
+vim.opt.scrolloff = 5
+vim.opt.colorcolumn = "80"
+vim.opt.clipboard = "unnamedplus"
 
 -- 0.12 Performance boost
 vim.loader.enable()
