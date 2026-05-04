@@ -18,6 +18,7 @@ vim.pack.add({
   'https://github.com/windwp/nvim-ts-autotag.git',
   'https://github.com/folke/snacks.nvim.git',
   'https://github.com/sphamba/smear-cursor.nvim.git',
+  'https://github.com/folke/which-key.nvim.git',
 })
 
 vim.opt.number = true
