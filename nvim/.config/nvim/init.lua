@@ -19,6 +19,7 @@ vim.pack.add({
   'https://github.com/folke/snacks.nvim.git',
   'https://github.com/sphamba/smear-cursor.nvim.git',
   'https://github.com/folke/which-key.nvim.git',
+  'https://github.com/stevearc/aerial.nvim.git',
 })
 
 vim.opt.number = true

@@ -27,11 +27,18 @@ map("n", "<C-n>", "<cmd> NvimTreeToggle <CR>", { desc = "Toggle nvimtree" })
 map("n", "<leader>e", "<cmd> NvimTreeFindFile <CR>", { desc = "Focus nvimtree" })
 
 --------------------------------------------------------------------------------
--- nvimtree
+-- lazygit
 --------------------------------------------------------------------------------
 map("n", "<leader>lg", function ()
   Snacks.lazygit.open()
-end, { desc = "Toggle nvimtree" })
+end, { desc = "Open lazygit" })
+
+--------------------------------------------------------------------------------
+-- Aerial
+--------------------------------------------------------------------------------
+map("n", "<leader>a", "<cmd> AerialToggle<CR>", { desc = "Toggle aerial" })
+map("n", "{", "<cmd> AerialPrev<CR>", { desc = "Aerial previous" })
+map("n", "}", "<cmd> AerialNext<CR>", { desc = "Aerial next" })
 
 --------------------------------------------------------------------------------
 -- lspconfig
@@ -40,7 +47,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
   callback = function(args)
     -- Map 'K' to hover only in this buffer
     map('n', 'K', vim.lsp.buf.hover, { buffer = args.buf, desc = "LSP hover"})
-    
+
     -- You can also map definition, references, etc. here
     map('n', 'gd', vim.lsp.buf.definition, { buffer = args.buf, desc = 'Go to definition' })
   end,
