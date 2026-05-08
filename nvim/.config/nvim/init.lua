@@ -20,6 +20,7 @@ vim.pack.add({
   'https://github.com/sphamba/smear-cursor.nvim.git',
   'https://github.com/folke/which-key.nvim.git',
   'https://github.com/stevearc/aerial.nvim.git',
+  'https://github.com/akinsho/bufferline.nvim.git',
 })
 
 vim.opt.number = true

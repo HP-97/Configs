@@ -6,6 +6,10 @@ vim.g.localleader = " " -- Optional: set localleader too
 -- Standard Operations
 --------------------------------------------------------------------------------
 map("n", ";", ":", { desc = "Alias for ':'"})
+map("n", "<Tab>", ":bnext<CR>", { desc = "Go to next buffer", noremap = true})
+map("n", "<S-Tab>", ":bprev<CR>", { desc = "Go to previous buffer", noremap = true})
+map("n", "<leader>x", ":bd<CR>", { desc = "Close current buffer", noremap = true})
+map("n", "<leader>X", ":%bd|e#|bd#<CR>", { desc = "Close all buffers except current", noremap = true})
 
 --------------------------------------------------------------------------------
 -- Telescope
