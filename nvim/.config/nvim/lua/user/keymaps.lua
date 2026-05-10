@@ -45,6 +45,14 @@ map("n", "{", "<cmd> AerialPrev<CR>", { desc = "Aerial previous" })
 map("n", "}", "<cmd> AerialNext<CR>", { desc = "Aerial next" })
 
 --------------------------------------------------------------------------------
+-- Flash
+--------------------------------------------------------------------------------
+map("n", "s", function() require("flash").jump() end, {desc = "Flash" })
+map({"n", "x", "o"}, "S", function() require("flash").treesitter() end, {desc = "Flash Treesitter" })
+map("o", "r", function() require("flash").remote() end, {desc = "Remote Flash" })
+map("c", "<C-s>", function() require("flash").toggle() end, {desc = "Toggle Flash search" })
+
+--------------------------------------------------------------------------------
 -- lspconfig
 --------------------------------------------------------------------------------
 vim.api.nvim_create_autocmd('LspAttach', {
