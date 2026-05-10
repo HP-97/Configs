@@ -10,6 +10,14 @@ map("n", "<Tab>", ":bnext<CR>", { desc = "Go to next buffer", noremap = true})
 map("n", "<S-Tab>", ":bprev<CR>", { desc = "Go to previous buffer", noremap = true})
 map("n", "<leader>x", ":bd<CR>", { desc = "Close current buffer", noremap = true})
 map("n", "<leader>X", ":%bd|e#|bd#<CR>", { desc = "Close all buffers except current", noremap = true})
+map("n", "H", "^", { desc = "Jump to start of line"})
+map("n", "L", "$", { desc = "Jump to end of line"})
+map("n", "<C-u>", "<C-u>zz", { desc = "Page up and then centre cursor"})
+map("n", "<C-d>", "<C-d>zz", { desc = "Page down and then centre cursor"})
+map("n", "<C-h>", "<C-w>h", { desc = "Navigate split left"})
+map("n", "<C-j>", "<C-w>j", { desc = "Navigate split down"})
+map("n", "<C-k>", "<C-w>k", { desc = "Navigate split up"})
+map("n", "<C-l>", "<C-w>l", { desc = "Navigate split right"})
 
 --------------------------------------------------------------------------------
 -- Telescope
