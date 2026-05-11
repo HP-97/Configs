@@ -22,6 +22,7 @@ vim.pack.add({
   'https://github.com/stevearc/aerial.nvim.git',
   'https://github.com/akinsho/bufferline.nvim.git',
   'https://github.com/folke/flash.nvim.git',
+  'https://github.com/nvim-treesitter/nvim-treesitter-context.git',
 })
 
 vim.opt.number = true
