@@ -58,7 +58,11 @@ map("n", "}", "<cmd> AerialNext<CR>", { desc = "Aerial next" })
 map("n", "s", function() require("flash").jump() end, {desc = "Flash" })
 map({"n", "x", "o"}, "S", function() require("flash").treesitter() end, {desc = "Flash Treesitter" })
 map("o", "r", function() require("flash").remote() end, {desc = "Remote Flash" })
-map("c", "<C-s>", function() require("flash").toggle() end, {desc = "Toggle Flash search" })
+map("c", "<C-s>", function()
+  local flash = require("flash")
+  local is_enabled = flash.toggle()
+  print("Flash toggle: " .. (is_enabled and "Enabled" or "Disabled"))
+end, {desc = "Toggle Flash search" })
 
 --------------------------------------------------------------------------------
 -- lspconfig
