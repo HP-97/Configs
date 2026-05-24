@@ -4,7 +4,9 @@ require("mason-lspconfig").setup({
   -- Specify your required LSPs here
       ensure_installed = {
           "bashls",
+          "cssls",
           "gopls",
+          "html",
           "jdtls",
           "lua_ls",
           "pyright",
