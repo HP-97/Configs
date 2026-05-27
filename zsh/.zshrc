@@ -130,3 +130,21 @@ setopt nomenucomplete
 
 # Run Cargo's env (i.e. rustup, rustc etc.)
 . "$HOME/.cargo/env"
+
+copy() {
+    # 1. Read input into a variable (handles pipes or files)
+    local input_data
+    input_data=$(cat "${1:-/dev/stdin}")
+
+    # 2. Base64 encode the data (stripping newlines from the base64 string itself)
+    local b64_data
+    b64_data=$(printf '%s' "$input_data" | base64 | tr -d '\n')
+
+    # 3. Output the OSC 52 sequence: \e]52;c;BASE64\a
+    # \e]52;  -> Start sequence
+    # c;      -> Target the system clipboard
+    # \a      -> String Terminator (ST)
+    printf "\e]52;c;%s\a" "$b64_data"
+    
+    echo "Copied to clipboard!"
+}
