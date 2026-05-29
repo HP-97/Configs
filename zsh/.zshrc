@@ -148,3 +148,5 @@ copy() {
     
     echo "Copied to clipboard!"
 }
+
+source <(COMPLETE=zsh jj)
