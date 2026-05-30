@@ -150,3 +150,15 @@ copy() {
 }
 
 source <(COMPLETE=zsh jj)
+
+# Ensure ~/.zfunc exists
+mkdir -p ~/.zfunc
+
+rustup completions zsh > ~/.zfunc/_rustup
+rustup completions zsh cargo > ~/.zfunc/_cargo
+
+#$fpath (short for function path) is a special array variable that stores the list of directories the shell searches for function definitions and completion scripts
+fpath+=~/.zfunc
+
+autoload -U compinit
+compinit
