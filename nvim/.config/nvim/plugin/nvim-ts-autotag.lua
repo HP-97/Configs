@@ -1,1 +1,5 @@
-require('nvim-ts-autotag').setup()
+require('nvim-ts-autotag').setup({
+  aliases = {
+    ["htmldjango"] = 'html'
+  }
+})
