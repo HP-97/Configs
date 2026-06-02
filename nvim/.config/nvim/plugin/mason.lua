@@ -8,6 +8,7 @@ require("mason-lspconfig").setup({
           "cssls",
           "gopls",
           "html",
+          "htmx",
           "jdtls",
           "lua_ls",
           "pyright",

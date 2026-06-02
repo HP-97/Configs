@@ -32,6 +32,12 @@ vim.opt.scrolloff = 5
 vim.opt.colorcolumn = "80"
 vim.opt.clipboard = "unnamedplus"
 
+-- Default tab behaviour
+vim.opt.shiftwidth = 2
+vim.opt.tabstop = 2
+vim.opt.softtabstop = 2
+vim.opt.expandtab = true
+
 -- 0.12 Performance boost
 vim.loader.enable()
 

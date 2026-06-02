@@ -3,7 +3,6 @@
 pkgs() {
 	brew update
 	brew install \
-		nvim \
 		yt-dlp \
 		go \
 		ripgrep \
@@ -14,7 +13,10 @@ pkgs() {
 		lazygit \
 		bottom \
 		jenv \
-		tmux
+		tmux \
+    jj \
+    bob \
+    git-delta
 }
 
 case "$1" in
