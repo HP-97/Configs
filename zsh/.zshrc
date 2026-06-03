@@ -98,10 +98,10 @@ plugins=(git zsh-autosuggestions)
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-source ~/.zsh_profile
+source "$HOME/.zsh_profile"
 
 # Test moving the oh-my-zsh.sh script to run after importing .zsh_profile
-source $ZSH/oh-my-zsh.sh
+source "$ZSH/oh-my-zsh.sh"
 
 # XXX: Temporarily disabling starship
 # eval "$(starship init zsh)"
@@ -121,7 +121,7 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 # jwt decoding
 jwt-decode() {
-  jq -R 'split(".") |.[0:2] | map(@base64d) | map(fromjson)' <<< $1
+  jq -R 'split(".") |.[0:2] | map(@base64d) | map(fromjson)' <<< "$1"
 }
 
 # refer to https://superuser.com/a/363926
