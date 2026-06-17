@@ -23,5 +23,8 @@ config.keys = {
   },
 }
 
+-- Required to show emojis correctly
+config.unicode_version = 14
+
 -- Finally, return the configuration to wezterm:
 return config
