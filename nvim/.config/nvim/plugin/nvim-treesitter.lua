@@ -14,6 +14,7 @@ require('nvim-treesitter').setup({
     "lua",
     "make",
     "markdown",
+    "nu",
     "php",
     "python",
     "rust",

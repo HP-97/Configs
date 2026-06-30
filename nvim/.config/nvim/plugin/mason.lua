@@ -11,6 +11,7 @@ require("mason-lspconfig").setup({
           "htmx",
           "jdtls",
           "lua_ls",
+          "nil_ls",
           "pyright",
           "tsgo",
           "rust_analyzer",
